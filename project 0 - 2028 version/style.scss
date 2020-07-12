@@ -1,0 +1,135 @@
+$color_min_width: green;
+$color_max_width: blue;
+
+/*Media Query Exapmple*/
+/*==================================*/
+@media (min-width:800px){
+		body{
+			background-color: color_min_width;
+		}
+}
+
+@media (max-width: 799px){
+		body{
+			background-color: color_max_width;
+		}
+}
+/*==================================*/
+
+
+h1{
+	background-color: yellow;
+	border: solid 2px;
+}
+
+
+/*Multi element selector*/
+/*===================================*/
+table, th, td, tr{
+	border: 1px solid;
+	border-collapse: collapse;
+	padding: 5px;
+}
+/*===================================*/
+
+.tableclass{
+	text-align: center;
+	tr{
+		background-color:gray;
+	}
+}
+th{
+	background-color: #9af3f5;
+}
+
+img{
+	border-radius: 100px;
+	width: 50%;
+	display: block;
+    margin: auto;
+}
+
+li{
+	border: 1px solid;
+	padding: 2px;
+	border-collapse: collapse;
+}
+
+/*Child Selector*/
+ol > li{
+	color: red;
+}
+/*===================================*/
+
+
+p{
+	font-size: 32px;
+}
+
+p::selection{
+	color: red;
+	background-color: yellow;
+}
+
+/*Attribute Selector*/
+/*====================================*/
+input[type=text]{
+	background-color: Yellow;
+}
+
+input[type=number]{
+	background-color: green;
+}
+
+/*====================================*/
+
+input{
+	padding: 20px;
+}
+
+/*print here states that when the line with class name = screen_only is printed on screen only not through printer.*/
+/*=====================================*/
+@media print{
+	.screen-only{
+		display: none;
+	}
+}
+/*=====================================*/
+
+.contain{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contain > div{
+	background-color: #9af3f5;
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 50px;
+	margin: 10px;
+	width:200px
+}
+
+.contain > div:hover{
+	background-color: #000000; 
+	color: #ffffff;
+}
+
+.row > div{
+	background-color: #9af3f5;
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 50px;
+	margin: 10px;
+	width:200px
+}
+
+
+%template{
+	padding: 100px;
+}
+
+.inherit{
+	@extend %template;
+	background-color: #9af3f5;
+}
